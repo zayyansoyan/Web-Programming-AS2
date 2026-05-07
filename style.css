@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    margin: 0 15px;
+    color: #419511;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.slides {
+    position: relative;
+    min-height: 500px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card img,
+.package-page img,
+.about img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 18px 16px 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.card p {
+    margin: 0 16px 16px;
+    color: #555;
+}
+
+.card a {
+    display: block;
+    margin: 0 16px 16px;
+    color: #fff;
+    background: #419511;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.about,
+.contact-form {
+    padding: 30px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 300px;
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    .about {
+        flex-direction: row;
+        text-align: left;
+    }
+}
